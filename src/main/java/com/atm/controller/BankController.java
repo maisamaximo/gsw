@@ -1,7 +1,7 @@
-package com.arm.atm.controller;
+package com.atm.controller;
 
-import com.arm.atm.entity.Bank;
-import com.arm.atm.repository.BankRepository;
+import com.atm.entity.Bank;
+import com.atm.repository.BankRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

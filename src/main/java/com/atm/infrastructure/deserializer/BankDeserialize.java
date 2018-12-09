@@ -1,8 +1,7 @@
-package com.arm.atm.infrastructure.deserializer;
+package com.atm.infrastructure.deserializer;
 
-import com.arm.atm.entity.Bank;
-import com.arm.atm.infrastructure.wrapper.BankNoteWrapper;
-import com.arm.atm.infrastructure.wrapper.BankWrapper;
+import com.atm.entity.Bank;
+import com.atm.infrastructure.wrapper.BankWrapper;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.ObjectCodec;

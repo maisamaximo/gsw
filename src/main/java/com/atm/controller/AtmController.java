@@ -1,12 +1,10 @@
-package com.arm.atm.controller;
+package com.atm.controller;
 
-import com.arm.atm.entity.Account;
-import com.arm.atm.entity.BankNote;
-import com.arm.atm.infrastructure.wrapper.AccountWrapper;
-import com.arm.atm.infrastructure.wrapper.BankNoteWrapper;
-import com.arm.atm.repository.AccountRepository;
-import com.arm.atm.services.AccountService;
-import com.arm.atm.services.Withdraw;
+import com.atm.entity.Account;
+import com.atm.infrastructure.wrapper.BankNoteWrapper;
+import com.atm.repository.AccountRepository;
+import com.atm.services.AccountService;
+import com.atm.services.Withdraw;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +31,7 @@ public class AtmController {
             @PathVariable String accountNumber,
             @RequestParam double value
     ) throws Exception {
-        Account account = accountService.getLogedAccountAccountNumber(accountNumber);
+        Account account = accountService.getLoggedAccountAccountNumber(accountNumber);
         withdraw.accountWithdraw(account, value);
         accountRepository.save(account);
         BankNoteWrapper wrapper = new BankNoteWrapper(withdraw.getBankNote());

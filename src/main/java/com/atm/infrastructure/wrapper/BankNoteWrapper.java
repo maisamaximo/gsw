@@ -1,7 +1,7 @@
-package com.arm.atm.infrastructure.wrapper;
+package com.atm.infrastructure.wrapper;
 
-import com.arm.atm.entity.BankNote;
-import com.arm.atm.infrastructure.serializer.BankNoteSerialize;
+import com.atm.entity.BankNote;
+import com.atm.infrastructure.serializer.BankNoteSerialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @JsonSerialize(using = BankNoteSerialize.class)

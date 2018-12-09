@@ -1,10 +1,10 @@
-package com.arm.atm.controller;
+package com.atm.controller;
 
 
-import com.arm.atm.entity.Account;
-import com.arm.atm.infrastructure.wrapper.AccountWrapper;
-import com.arm.atm.repository.AccountRepository;
-import com.arm.atm.services.AccountService;
+import com.atm.entity.Account;
+import com.atm.infrastructure.wrapper.AccountWrapper;
+import com.atm.repository.AccountRepository;
+import com.atm.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,9 +43,9 @@ public class AccountController {
         return new ResponseEntity<>(accountRepository.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/logedAccounts")
-    public ResponseEntity<?> getLogedAccounts() {
-        return new ResponseEntity<>(accountService.getLogedAccounts(), HttpStatus.OK);
+    @GetMapping("/loggedAccounts")
+    public ResponseEntity<?> getLoggedAccounts() {
+        return new ResponseEntity<>(accountService.getLoggedAccounts(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/login")
@@ -53,8 +53,14 @@ public class AccountController {
 
         Account existingAccount = accountRepository.findByAccountNumberAndAccountPassword(loginAccount.getAccountNumber(), loginAccount.getAccountPassword());
         Optional.ofNullable(existingAccount).orElseThrow(()-> new RuntimeException("Invalid Number Account or password"));
-        accountService.addNewLogedAccount(existingAccount);
+        accountService.addNewLoggedAccount(existingAccount);
         return new ResponseEntity<>(existingAccount, HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/logout/{accountNumber}")
+    public ResponseEntity<?> removeLoggedAccount(@PathVariable String accountNumber){
+        accountService.removeLoggedAccount(accountNumber);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
     class LoginAccount{

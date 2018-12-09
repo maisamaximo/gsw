@@ -1,7 +1,7 @@
-package com.arm.atm.infrastructure.serializer;
+package com.atm.infrastructure.serializer;
 
-import com.arm.atm.entity.BankNote;
-import com.arm.atm.infrastructure.wrapper.BankNoteWrapper;
+import com.atm.entity.BankNote;
+import com.atm.infrastructure.wrapper.BankNoteWrapper;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;

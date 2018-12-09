@@ -1,7 +1,7 @@
-package com.arm.atm.repository;
+package com.atm.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.arm.atm.entity.Account;
+import com.atm.entity.Account;
 import org.springframework.stereotype.Repository;
 
 @Repository

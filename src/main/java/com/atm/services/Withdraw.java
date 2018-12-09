@@ -1,7 +1,7 @@
-package com.arm.atm.services;
+package com.atm.services;
 
-import com.arm.atm.entity.Account;
-import com.arm.atm.entity.BankNote;
+import com.atm.entity.Account;
+import com.atm.entity.BankNote;
 import org.springframework.stereotype.Service;
 
 @Service

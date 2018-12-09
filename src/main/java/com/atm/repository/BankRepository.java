@@ -1,8 +1,8 @@
-package com.arm.atm.repository;
+package com.atm.repository;
 
 import java.util.List;
 
-import com.arm.atm.entity.Bank;
+import com.atm.entity.Bank;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

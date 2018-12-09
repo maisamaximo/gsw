@@ -1,9 +1,9 @@
-package com.arm.atm.data;
+package com.atm.data;
 
-import com.arm.atm.entity.Account;
-import com.arm.atm.entity.Bank;
-import com.arm.atm.repository.AccountRepository;
-import com.arm.atm.repository.BankRepository;
+import com.atm.entity.Account;
+import com.atm.entity.Bank;
+import com.atm.repository.AccountRepository;
+import com.atm.repository.BankRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

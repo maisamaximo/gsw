@@ -1,7 +1,7 @@
-package com.arm.atm.infrastructure.serializer;
+package com.atm.infrastructure.serializer;
 
-import com.arm.atm.entity.Bank;
-import com.arm.atm.infrastructure.wrapper.BankWrapper;
+import com.atm.entity.Bank;
+import com.atm.infrastructure.wrapper.BankWrapper;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;

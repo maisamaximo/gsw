@@ -1,4 +1,4 @@
-package com.arm.atm.entity;
+package com.atm.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

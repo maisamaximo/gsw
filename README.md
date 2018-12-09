@@ -30,8 +30,7 @@ _________________________________________________________
 #### Instructions
 
 - [ ] Create new branch with your name
--
-maisamaximo
+- ```maisamaximo```
 - [ ] Instructions to run this project
 - [ ] Build the project
 - [ ] Change the mySql database to h2

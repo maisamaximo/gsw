@@ -1,8 +1,8 @@
-package com.arm.atm.infrastructure.wrapper;
+package com.atm.infrastructure.wrapper;
 
-import com.arm.atm.entity.Account;
-import com.arm.atm.infrastructure.deserializer.AccountDeserialize;
-import com.arm.atm.infrastructure.serializer.AccountSerialize;
+import com.atm.entity.Account;
+import com.atm.infrastructure.deserializer.AccountDeserialize;
+import com.atm.infrastructure.serializer.AccountSerialize;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
