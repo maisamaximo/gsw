@@ -8,35 +8,110 @@ This is an application that simulates a delivery of notes when a customer makes 
 
 ## User side
 url : [```ATM - GSW Interview```](https://atmgswinterviewmaisamaximo.herokuapp.com/)
+
+First of all you will need to register your account to access the application
+
+1. Register a new account with:
+  - numerical account
+  - Account owner
+  - balance
+  - Password <br>
+__GREAT!__
+2. After that, you will be able to enter your account Number and password.
+
+3. With your account registered, click 'withdraw' and enter a value.
+You will receive the fewest banknotes.
+
+4. Your balance account will be automatically updated.
+
+5. You can do the same operation for other users.
+
+6. Log out of your account, make sure you are no longer connected.
+
+### Important Information
+- You can register as many accounts as you want, but the application only supports five accounts connected at the same time.
+- If your balance is greater than the amount you want, you will not be able to complete the transaction.
+- Banknotes available:<br>
+```R$ 100.00``` <br>
+```R$ 50,00```<br>
+```R$ 20.00```<br>
+```R$ 10,00```
+
 ## Developer Side
 
-Endpoints:
+#### Endpoints (Postman):
 
-Delete Account
- localhost:8080/atm/deleteAccount/1
+ __Account CRUD__
 
-_________________________________________________________
+- Create New Account: <br>
+[localhost:8080/account/createAccount]()
+```json
+{"accountNumber":"14785236-9",
+ "accountOwner":"Lucas Rosa",
+ "accountBalance":50000.00,
+ "accountPassword":"@m0rM3u"}
+```
+- Delete Account <br>
+[localhost:8080/account/deleteAccount/```{accountId}```]()
+- Show All Accounts <br>
+[localhost:8080/account/allAccounts]()
+
+__Bank CRUD__
+- Create New Bank <br>
+[localhost:8080/bank/newBank]()
+
+```json
+{"bankName":"NuBank"}
+```
+
+- Delete Bank <br>
+[localhost:8080/bank/deleteBank/```{bankId}```]()
+- Show All Banks <br>
+[localhost:8080/bank/allBanks]()
+
+__Login__
+
+- Validate Account <br>
+[localhost:8080/account/login]()
+```json
+{
+  "accountNumber": 605823498,
+  "accountPassword": "adm"
+}
+```
+- Logged Accounts <br>
+[localhost:8080/account/loggedAccounts]()
+- Logout Accounts <br>
+[localhost:8080/account/logout/605823498]()
+
+__ATM__
+
+- Wirhdraw Operation <br>
+[localhost:8080/atm/withdrawOperation/```{numberAccount}?value={amount}```]()
+
+___
+
 #### Basic requirements
 
-- [ ] Deliver the lowest number of notes
-- [ ] The requested value only can be extracted with the available notes
-- [ ] Balance of the client will be registered
-- [ ] Number of notes: infinite
-- [ ] Available notes: R$100,00; R$50,00; R$20,00 and R$10,00
-- [ ] Customer balance can't be negative
-- [ ] Enter the balance customer with the CRUD  accounts
-- [ ] Limit to five logged in users at the same time
+- [x] Deliver the lowest number of notes
+- [x] The requested value only can be extracted with the available notes
+- [x] Balance of the client will be registered
+- [x] Number of notes: infinite
+- [x] Available notes: R$100,00; R$50,00; R$20,00 and R$10,00
+- [x] Customer balance can't be negative
+- [x] Enter the balance customer with the CRUD  accounts
+- [x] Limit to five logged in users at the same time
 
 #### Instructions
 
-- [ ] Create new branch with your name
+- [x] Create new branch with your name
 - ```maisamaximo```
-- [ ] Instructions to run this project
-- [ ] Build the project
-- [ ] Change the mySql database to h2
-- [ ] Run spring-boot
+- [x] Instructions to run this project
+- [x] Build the project
+- [x] Change the mySql database to h2
+- [x] Run spring-boot
 - [ ] Do the application tests (postman and jUnit)
-- [ ] Apply improvements and tests if necessary
+- [x] Apply improvements and tests if necessary
 
 #### Future improvements
 
