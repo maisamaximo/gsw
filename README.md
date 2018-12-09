@@ -7,7 +7,7 @@
 This is an application that simulates a delivery of notes when a customer makes a withdrawal at an ATM.
 
 ## User side
-url : [```ATM - GSW Interview```](https://atmgswinterviewmaisamaximo.herokuapp.com/)
+url : [```ATM - GSW Interview```](https://atmgswmaisamaximo.herokuapp.com/atm)
 
 First of all you will need to register your account to access the application
 
@@ -106,7 +106,7 @@ ___
 
 - [x] Create new branch with your name
 - ```maisamaximo```
-- [x] Instructions to run this project
+- [ ] Instructions to run this project
 - [x] Build the project
 - [x] Change the mySql database to h2
 - [x] Run spring-boot
